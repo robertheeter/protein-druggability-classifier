@@ -1,0 +1,259 @@
+Lmod has detected the following error: The following module(s) are unknown:
+"cuda11.8/toolkit/11.8.0"
+
+Please check the spelling or version number. Also try "module spider ..."
+It is also possible your cache file is out-of-date; it may help to try:
+  $ module --ignore-cache load "cuda11.8/toolkit/11.8.0"
+
+Also make sure that all modulefiles written in TCL start with the string
+#%Module
+
+
+
+	To use after loading the module, enter the following:
+	    eval "$(/risapps/rhel7/miniconda3/38_4.9.2/bin/conda shell.bash hook)"
+2024-03-03 15:47:40 - CRITICAL: MODEL PARAMETERS
+2024-03-03 15:47:40 - INFO: dataset_path = data/dataset/graphed.csv
+2024-03-03 15:47:40 - INFO: train_validation_test_split = [0.75, 0.0, 0.25]
+2024-03-03 15:47:40 - INFO: batch_size = 8
+2024-03-03 15:47:40 - INFO: num_workers = 8
+2024-03-03 15:47:40 - INFO: hidden_channels = 64
+2024-03-03 15:47:40 - INFO: epochs = 200
+2024-03-03 15:47:40 - INFO: learning_rate = 1e-05
+2024-03-03 15:47:40 - CRITICAL: MODEL PROPERTIES
+2024-03-03 15:47:40 - INFO: num_train = 1601
+2024-03-03 15:47:40 - INFO: num_validation = 0
+2024-03-03 15:47:40 - INFO: num_test = 533
+2024-03-03 15:47:40 - INFO: example_graph = Data(x=[1780, 39], edge_index=[2, 253034], edge_attr=[253034, 2], y=[1780], pos=[1780, 3], sasa=[1780], surface_accessible=[1780], num_nodes=1780, num_node_features=39, num_edges=253034, num_edge_features=2, num_dimensions=3, graph_path='data/dataset/2EVU_A/graph.pyg', protein_path='data/dataset/2EVU_A/protein.pdb', labels_path='data/dataset/2EVU_A/labels.npy', radius_ncov=10)
+2024-03-03 15:47:48 - CRITICAL: MODEL ARCHITECTURE
+2024-03-03 15:47:48 - INFO: device = cuda
+2024-03-03 15:47:48 - INFO: model = GCN(
+  (conv1): GATv2Conv(39, 64, heads=1)
+  (conv2): GATv2Conv(64, 64, heads=1)
+  (conv3): GATv2Conv(64, 1, heads=1)
+)
+2024-03-03 15:47:48 - INFO: optimizer = Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    capturable: False
+    differentiable: False
+    eps: 1e-08
+    foreach: None
+    fused: None
+    lr: 1e-05
+    maximize: False
+    weight_decay: 0.0001
+)
+2024-03-03 15:47:48 - INFO: criterion = BCEWithLogitsLoss()
+2024-03-03 15:47:48 - CRITICAL: MODEL TRAINING
+2024-03-03 15:48:29 - INFO: epoch 000: epoch_loss = 0.8328, mu_ncov = 9.9977
+2024-03-03 15:49:05 - INFO: epoch 001: epoch_loss = 0.7554, mu_ncov = 9.9952
+2024-03-03 15:49:42 - INFO: epoch 002: epoch_loss = 0.6931, mu_ncov = 9.9928
+2024-03-03 15:50:18 - INFO: epoch 003: epoch_loss = 0.6437, mu_ncov = 9.9907
+2024-03-03 15:50:53 - INFO: epoch 004: epoch_loss = 0.6038, mu_ncov = 9.9886
+2024-03-03 15:51:32 - INFO: epoch 005: epoch_loss = 0.5716, mu_ncov = 9.9866
+2024-03-03 15:52:09 - INFO: epoch 006: epoch_loss = 0.5470, mu_ncov = 9.9846
+2024-03-03 15:52:49 - INFO: epoch 007: epoch_loss = 0.5289, mu_ncov = 9.9824
+2024-03-03 15:53:26 - INFO: epoch 008: epoch_loss = 0.5167, mu_ncov = 9.9802
+2024-03-03 15:54:04 - INFO: epoch 009: epoch_loss = 0.5083, mu_ncov = 9.9779
+2024-03-03 15:54:41 - INFO: epoch 010: epoch_loss = 0.5035, mu_ncov = 9.9756
+2024-03-03 15:55:20 - INFO: epoch 011: epoch_loss = 0.5002, mu_ncov = 9.9733
+2024-03-03 15:55:58 - INFO: epoch 012: epoch_loss = 0.4989, mu_ncov = 9.9710
+2024-03-03 15:56:38 - INFO: epoch 013: epoch_loss = 0.4983, mu_ncov = 9.9688
+2024-03-03 15:57:18 - INFO: epoch 014: epoch_loss = 0.4976, mu_ncov = 9.9666
+2024-03-03 15:57:57 - INFO: epoch 015: epoch_loss = 0.4973, mu_ncov = 9.9644
+2024-03-03 15:58:31 - INFO: epoch 016: epoch_loss = 0.4974, mu_ncov = 9.9623
+2024-03-03 15:59:08 - INFO: epoch 017: epoch_loss = 0.4973, mu_ncov = 9.9602
+2024-03-03 15:59:46 - INFO: epoch 018: epoch_loss = 0.4972, mu_ncov = 9.9581
+2024-03-03 16:00:24 - INFO: epoch 019: epoch_loss = 0.4974, mu_ncov = 9.9560
+2024-03-03 16:01:01 - INFO: epoch 020: epoch_loss = 0.4971, mu_ncov = 9.9539
+2024-03-03 16:01:40 - INFO: epoch 021: epoch_loss = 0.4970, mu_ncov = 9.9519
+2024-03-03 16:02:17 - INFO: epoch 022: epoch_loss = 0.4970, mu_ncov = 9.9498
+2024-03-03 16:02:54 - INFO: epoch 023: epoch_loss = 0.4971, mu_ncov = 9.9478
+2024-03-03 16:03:32 - INFO: epoch 024: epoch_loss = 0.4966, mu_ncov = 9.9458
+2024-03-03 16:04:07 - INFO: epoch 025: epoch_loss = 0.4970, mu_ncov = 9.9438
+2024-03-03 16:04:45 - INFO: epoch 026: epoch_loss = 0.4965, mu_ncov = 9.9418
+2024-03-03 16:05:22 - INFO: epoch 027: epoch_loss = 0.4968, mu_ncov = 9.9398
+2024-03-03 16:06:01 - INFO: epoch 028: epoch_loss = 0.4966, mu_ncov = 9.9378
+2024-03-03 16:06:41 - INFO: epoch 029: epoch_loss = 0.4968, mu_ncov = 9.9358
+2024-03-03 16:07:19 - INFO: epoch 030: epoch_loss = 0.4968, mu_ncov = 9.9339
+2024-03-03 16:07:59 - INFO: epoch 031: epoch_loss = 0.4966, mu_ncov = 9.9319
+2024-03-03 16:08:37 - INFO: epoch 032: epoch_loss = 0.4963, mu_ncov = 9.9299
+2024-03-03 16:09:15 - INFO: epoch 033: epoch_loss = 0.4966, mu_ncov = 9.9279
+2024-03-03 16:09:53 - INFO: epoch 034: epoch_loss = 0.4963, mu_ncov = 9.9259
+2024-03-03 16:10:30 - INFO: epoch 035: epoch_loss = 0.4960, mu_ncov = 9.9239
+2024-03-03 16:11:08 - INFO: epoch 036: epoch_loss = 0.4962, mu_ncov = 9.9220
+2024-03-03 16:11:45 - INFO: epoch 037: epoch_loss = 0.4964, mu_ncov = 9.9200
+2024-03-03 16:12:20 - INFO: epoch 038: epoch_loss = 0.4968, mu_ncov = 9.9180
+2024-03-03 16:12:57 - INFO: epoch 039: epoch_loss = 0.4959, mu_ncov = 9.9161
+2024-03-03 16:13:35 - INFO: epoch 040: epoch_loss = 0.4960, mu_ncov = 9.9142
+2024-03-03 16:14:13 - INFO: epoch 041: epoch_loss = 0.4962, mu_ncov = 9.9122
+2024-03-03 16:14:50 - INFO: epoch 042: epoch_loss = 0.4957, mu_ncov = 9.9102
+2024-03-03 16:15:26 - INFO: epoch 043: epoch_loss = 0.4957, mu_ncov = 9.9083
+2024-03-03 16:16:05 - INFO: epoch 044: epoch_loss = 0.4955, mu_ncov = 9.9063
+2024-03-03 16:16:43 - INFO: epoch 045: epoch_loss = 0.4956, mu_ncov = 9.9044
+2024-03-03 16:17:22 - INFO: epoch 046: epoch_loss = 0.4954, mu_ncov = 9.9024
+2024-03-03 16:17:59 - INFO: epoch 047: epoch_loss = 0.4954, mu_ncov = 9.9004
+2024-03-03 16:18:37 - INFO: epoch 048: epoch_loss = 0.4954, mu_ncov = 9.8985
+2024-03-03 16:19:15 - INFO: epoch 049: epoch_loss = 0.4952, mu_ncov = 9.8965
+2024-03-03 16:19:53 - INFO: epoch 050: epoch_loss = 0.4957, mu_ncov = 9.8946
+2024-03-03 16:20:33 - INFO: epoch 051: epoch_loss = 0.4952, mu_ncov = 9.8926
+2024-03-03 16:21:11 - INFO: epoch 052: epoch_loss = 0.4951, mu_ncov = 9.8907
+2024-03-03 16:21:48 - INFO: epoch 053: epoch_loss = 0.4953, mu_ncov = 9.8887
+2024-03-03 16:22:24 - INFO: epoch 054: epoch_loss = 0.4948, mu_ncov = 9.8868
+2024-03-03 16:23:01 - INFO: epoch 055: epoch_loss = 0.4951, mu_ncov = 9.8848
+2024-03-03 16:23:39 - INFO: epoch 056: epoch_loss = 0.4947, mu_ncov = 9.8829
+2024-03-03 16:24:17 - INFO: epoch 057: epoch_loss = 0.4944, mu_ncov = 9.8809
+2024-03-03 16:24:57 - INFO: epoch 058: epoch_loss = 0.4947, mu_ncov = 9.8790
+2024-03-03 16:25:36 - INFO: epoch 059: epoch_loss = 0.4948, mu_ncov = 9.8770
+2024-03-03 16:26:14 - INFO: epoch 060: epoch_loss = 0.4946, mu_ncov = 9.8751
+2024-03-03 16:26:49 - INFO: epoch 061: epoch_loss = 0.4942, mu_ncov = 9.8731
+2024-03-03 16:27:27 - INFO: epoch 062: epoch_loss = 0.4942, mu_ncov = 9.8712
+2024-03-03 16:28:03 - INFO: epoch 063: epoch_loss = 0.4940, mu_ncov = 9.8693
+2024-03-03 16:28:37 - INFO: epoch 064: epoch_loss = 0.4939, mu_ncov = 9.8673
+2024-03-03 16:29:15 - INFO: epoch 065: epoch_loss = 0.4938, mu_ncov = 9.8654
+2024-03-03 16:29:53 - INFO: epoch 066: epoch_loss = 0.4938, mu_ncov = 9.8635
+2024-03-03 16:30:32 - INFO: epoch 067: epoch_loss = 0.4934, mu_ncov = 9.8615
+2024-03-03 16:31:09 - INFO: epoch 068: epoch_loss = 0.4936, mu_ncov = 9.8596
+2024-03-03 16:31:48 - INFO: epoch 069: epoch_loss = 0.4937, mu_ncov = 9.8577
+2024-03-03 16:32:27 - INFO: epoch 070: epoch_loss = 0.4933, mu_ncov = 9.8558
+2024-03-03 16:33:04 - INFO: epoch 071: epoch_loss = 0.4932, mu_ncov = 9.8539
+2024-03-03 16:33:43 - INFO: epoch 072: epoch_loss = 0.4930, mu_ncov = 9.8520
+2024-03-03 16:34:20 - INFO: epoch 073: epoch_loss = 0.4930, mu_ncov = 9.8500
+2024-03-03 16:34:59 - INFO: epoch 074: epoch_loss = 0.4929, mu_ncov = 9.8481
+2024-03-03 16:35:39 - INFO: epoch 075: epoch_loss = 0.4928, mu_ncov = 9.8462
+2024-03-03 16:36:16 - INFO: epoch 076: epoch_loss = 0.4925, mu_ncov = 9.8443
+2024-03-03 16:36:51 - INFO: epoch 077: epoch_loss = 0.4922, mu_ncov = 9.8424
+2024-03-03 16:37:29 - INFO: epoch 078: epoch_loss = 0.4926, mu_ncov = 9.8405
+2024-03-03 16:38:08 - INFO: epoch 079: epoch_loss = 0.4922, mu_ncov = 9.8386
+2024-03-03 16:38:47 - INFO: epoch 080: epoch_loss = 0.4921, mu_ncov = 9.8367
+2024-03-03 16:39:25 - INFO: epoch 081: epoch_loss = 0.4920, mu_ncov = 9.8348
+2024-03-03 16:40:03 - INFO: epoch 082: epoch_loss = 0.4920, mu_ncov = 9.8329
+2024-03-03 16:40:41 - INFO: epoch 083: epoch_loss = 0.4915, mu_ncov = 9.8310
+2024-03-03 16:41:19 - INFO: epoch 084: epoch_loss = 0.4916, mu_ncov = 9.8291
+2024-03-03 16:41:55 - INFO: epoch 085: epoch_loss = 0.4912, mu_ncov = 9.8272
+2024-03-03 16:42:31 - INFO: epoch 086: epoch_loss = 0.4915, mu_ncov = 9.8253
+2024-03-03 16:43:10 - INFO: epoch 087: epoch_loss = 0.4910, mu_ncov = 9.8234
+2024-03-03 16:43:48 - INFO: epoch 088: epoch_loss = 0.4910, mu_ncov = 9.8215
+2024-03-03 16:44:27 - INFO: epoch 089: epoch_loss = 0.4907, mu_ncov = 9.8196
+2024-03-03 16:45:06 - INFO: epoch 090: epoch_loss = 0.4904, mu_ncov = 9.8177
+2024-03-03 16:45:45 - INFO: epoch 091: epoch_loss = 0.4906, mu_ncov = 9.8158
+2024-03-03 16:46:21 - INFO: epoch 092: epoch_loss = 0.4903, mu_ncov = 9.8139
+2024-03-03 16:47:01 - INFO: epoch 093: epoch_loss = 0.4902, mu_ncov = 9.8120
+2024-03-03 16:47:43 - INFO: epoch 094: epoch_loss = 0.4901, mu_ncov = 9.8101
+2024-03-03 16:48:20 - INFO: epoch 095: epoch_loss = 0.4900, mu_ncov = 9.8082
+2024-03-03 16:48:58 - INFO: epoch 096: epoch_loss = 0.4899, mu_ncov = 9.8064
+2024-03-03 16:49:39 - INFO: epoch 097: epoch_loss = 0.4894, mu_ncov = 9.8045
+2024-03-03 16:50:18 - INFO: epoch 098: epoch_loss = 0.4894, mu_ncov = 9.8026
+2024-03-03 16:50:57 - INFO: epoch 099: epoch_loss = 0.4893, mu_ncov = 9.8008
+2024-03-03 16:51:35 - INFO: epoch 100: epoch_loss = 0.4891, mu_ncov = 9.7989
+2024-03-03 16:52:12 - INFO: epoch 101: epoch_loss = 0.4891, mu_ncov = 9.7971
+2024-03-03 16:52:51 - INFO: epoch 102: epoch_loss = 0.4888, mu_ncov = 9.7952
+2024-03-03 16:53:31 - INFO: epoch 103: epoch_loss = 0.4886, mu_ncov = 9.7934
+2024-03-03 16:54:09 - INFO: epoch 104: epoch_loss = 0.4884, mu_ncov = 9.7916
+2024-03-03 16:54:48 - INFO: epoch 105: epoch_loss = 0.4882, mu_ncov = 9.7897
+2024-03-03 16:55:26 - INFO: epoch 106: epoch_loss = 0.4883, mu_ncov = 9.7879
+2024-03-03 16:56:03 - INFO: epoch 107: epoch_loss = 0.4877, mu_ncov = 9.7860
+2024-03-03 16:56:42 - INFO: epoch 108: epoch_loss = 0.4879, mu_ncov = 9.7842
+2024-03-03 16:57:20 - INFO: epoch 109: epoch_loss = 0.4873, mu_ncov = 9.7824
+2024-03-03 16:57:56 - INFO: epoch 110: epoch_loss = 0.4873, mu_ncov = 9.7805
+2024-03-03 16:58:31 - INFO: epoch 111: epoch_loss = 0.4873, mu_ncov = 9.7787
+2024-03-03 16:59:08 - INFO: epoch 112: epoch_loss = 0.4871, mu_ncov = 9.7769
+2024-03-03 16:59:47 - INFO: epoch 113: epoch_loss = 0.4869, mu_ncov = 9.7751
+2024-03-03 17:00:25 - INFO: epoch 114: epoch_loss = 0.4866, mu_ncov = 9.7733
+2024-03-03 17:01:03 - INFO: epoch 115: epoch_loss = 0.4863, mu_ncov = 9.7715
+2024-03-03 17:01:43 - INFO: epoch 116: epoch_loss = 0.4863, mu_ncov = 9.7697
+2024-03-03 17:02:20 - INFO: epoch 117: epoch_loss = 0.4862, mu_ncov = 9.7679
+2024-03-03 17:02:58 - INFO: epoch 118: epoch_loss = 0.4860, mu_ncov = 9.7661
+2024-03-03 17:03:39 - INFO: epoch 119: epoch_loss = 0.4857, mu_ncov = 9.7643
+2024-03-03 17:04:18 - INFO: epoch 120: epoch_loss = 0.4856, mu_ncov = 9.7626
+2024-03-03 17:04:58 - INFO: epoch 121: epoch_loss = 0.4852, mu_ncov = 9.7608
+2024-03-03 17:05:38 - INFO: epoch 122: epoch_loss = 0.4852, mu_ncov = 9.7590
+2024-03-03 17:06:17 - INFO: epoch 123: epoch_loss = 0.4852, mu_ncov = 9.7572
+2024-03-03 17:06:54 - INFO: epoch 124: epoch_loss = 0.4852, mu_ncov = 9.7554
+2024-03-03 17:07:33 - INFO: epoch 125: epoch_loss = 0.4847, mu_ncov = 9.7536
+2024-03-03 17:08:08 - INFO: epoch 126: epoch_loss = 0.4844, mu_ncov = 9.7519
+2024-03-03 17:08:44 - INFO: epoch 127: epoch_loss = 0.4843, mu_ncov = 9.7501
+2024-03-03 17:09:20 - INFO: epoch 128: epoch_loss = 0.4839, mu_ncov = 9.7483
+2024-03-03 17:10:00 - INFO: epoch 129: epoch_loss = 0.4845, mu_ncov = 9.7465
+2024-03-03 17:10:39 - INFO: epoch 130: epoch_loss = 0.4831, mu_ncov = 9.7448
+2024-03-03 17:11:15 - INFO: epoch 131: epoch_loss = 0.4836, mu_ncov = 9.7435
+2024-03-03 17:11:51 - INFO: epoch 132: epoch_loss = 0.4836, mu_ncov = 9.7423
+2024-03-03 17:12:29 - INFO: epoch 133: epoch_loss = 0.4831, mu_ncov = 9.7410
+2024-03-03 17:13:08 - INFO: epoch 134: epoch_loss = 0.4834, mu_ncov = 9.7396
+2024-03-03 17:13:46 - INFO: epoch 135: epoch_loss = 0.4830, mu_ncov = 9.7382
+2024-03-03 17:14:24 - INFO: epoch 136: epoch_loss = 0.4830, mu_ncov = 9.7367
+2024-03-03 17:15:02 - INFO: epoch 137: epoch_loss = 0.4829, mu_ncov = 9.7352
+2024-03-03 17:15:38 - INFO: epoch 138: epoch_loss = 0.4829, mu_ncov = 9.7337
+2024-03-03 17:16:14 - INFO: epoch 139: epoch_loss = 0.4826, mu_ncov = 9.7321
+2024-03-03 17:16:53 - INFO: epoch 140: epoch_loss = 0.4826, mu_ncov = 9.7306
+2024-03-03 17:17:30 - INFO: epoch 141: epoch_loss = 0.4823, mu_ncov = 9.7290
+2024-03-03 17:18:09 - INFO: epoch 142: epoch_loss = 0.4821, mu_ncov = 9.7274
+2024-03-03 17:18:49 - INFO: epoch 143: epoch_loss = 0.4820, mu_ncov = 9.7257
+2024-03-03 17:19:27 - INFO: epoch 144: epoch_loss = 0.4819, mu_ncov = 9.7241
+2024-03-03 17:20:04 - INFO: epoch 145: epoch_loss = 0.4818, mu_ncov = 9.7224
+2024-03-03 17:20:42 - INFO: epoch 146: epoch_loss = 0.4815, mu_ncov = 9.7208
+2024-03-03 17:21:18 - INFO: epoch 147: epoch_loss = 0.4813, mu_ncov = 9.7191
+2024-03-03 17:21:59 - INFO: epoch 148: epoch_loss = 0.4812, mu_ncov = 9.7175
+2024-03-03 17:22:36 - INFO: epoch 149: epoch_loss = 0.4809, mu_ncov = 9.7159
+2024-03-03 17:23:14 - INFO: epoch 150: epoch_loss = 0.4805, mu_ncov = 9.7142
+2024-03-03 17:23:53 - INFO: epoch 151: epoch_loss = 0.4805, mu_ncov = 9.7125
+2024-03-03 17:24:29 - INFO: epoch 152: epoch_loss = 0.4804, mu_ncov = 9.7109
+2024-03-03 17:25:08 - INFO: epoch 153: epoch_loss = 0.4803, mu_ncov = 9.7093
+2024-03-03 17:25:46 - INFO: epoch 154: epoch_loss = 0.4802, mu_ncov = 9.7077
+2024-03-03 17:26:26 - INFO: epoch 155: epoch_loss = nan, mu_ncov = nan
+2024-03-03 17:27:05 - INFO: epoch 156: epoch_loss = nan, mu_ncov = nan
+2024-03-03 17:27:42 - INFO: epoch 157: epoch_loss = nan, mu_ncov = nan
+2024-03-03 17:28:22 - INFO: epoch 158: epoch_loss = nan, mu_ncov = nan
+2024-03-03 17:28:58 - INFO: epoch 159: epoch_loss = nan, mu_ncov = nan
+2024-03-03 17:29:35 - INFO: epoch 160: epoch_loss = nan, mu_ncov = nan
+2024-03-03 17:30:11 - INFO: epoch 161: epoch_loss = nan, mu_ncov = nan
+2024-03-03 17:30:50 - INFO: epoch 162: epoch_loss = nan, mu_ncov = nan
+2024-03-03 17:31:29 - INFO: epoch 163: epoch_loss = nan, mu_ncov = nan
+2024-03-03 17:32:09 - INFO: epoch 164: epoch_loss = nan, mu_ncov = nan
+2024-03-03 17:32:48 - INFO: epoch 165: epoch_loss = nan, mu_ncov = nan
+2024-03-03 17:33:25 - INFO: epoch 166: epoch_loss = nan, mu_ncov = nan
+2024-03-03 17:34:04 - INFO: epoch 167: epoch_loss = nan, mu_ncov = nan
+2024-03-03 17:34:43 - INFO: epoch 168: epoch_loss = nan, mu_ncov = nan
+2024-03-03 17:35:19 - INFO: epoch 169: epoch_loss = nan, mu_ncov = nan
+2024-03-03 17:35:57 - INFO: epoch 170: epoch_loss = nan, mu_ncov = nan
+2024-03-03 17:36:37 - INFO: epoch 171: epoch_loss = nan, mu_ncov = nan
+2024-03-03 17:37:13 - INFO: epoch 172: epoch_loss = nan, mu_ncov = nan
+2024-03-03 17:37:51 - INFO: epoch 173: epoch_loss = nan, mu_ncov = nan
+2024-03-03 17:38:29 - INFO: epoch 174: epoch_loss = nan, mu_ncov = nan
+2024-03-03 17:39:07 - INFO: epoch 175: epoch_loss = nan, mu_ncov = nan
+2024-03-03 17:39:47 - INFO: epoch 176: epoch_loss = nan, mu_ncov = nan
+2024-03-03 17:40:23 - INFO: epoch 177: epoch_loss = nan, mu_ncov = nan
+2024-03-03 17:41:00 - INFO: epoch 178: epoch_loss = nan, mu_ncov = nan
+2024-03-03 17:41:40 - INFO: epoch 179: epoch_loss = nan, mu_ncov = nan
+2024-03-03 17:42:21 - INFO: epoch 180: epoch_loss = nan, mu_ncov = nan
+2024-03-03 17:43:00 - INFO: epoch 181: epoch_loss = nan, mu_ncov = nan
+2024-03-03 17:43:37 - INFO: epoch 182: epoch_loss = nan, mu_ncov = nan
+2024-03-03 17:44:13 - INFO: epoch 183: epoch_loss = nan, mu_ncov = nan
+2024-03-03 17:44:51 - INFO: epoch 184: epoch_loss = nan, mu_ncov = nan
+2024-03-03 17:45:28 - INFO: epoch 185: epoch_loss = nan, mu_ncov = nan
+2024-03-03 17:46:04 - INFO: epoch 186: epoch_loss = nan, mu_ncov = nan
+2024-03-03 17:46:44 - INFO: epoch 187: epoch_loss = nan, mu_ncov = nan
+2024-03-03 17:47:19 - INFO: epoch 188: epoch_loss = nan, mu_ncov = nan
+2024-03-03 17:47:56 - INFO: epoch 189: epoch_loss = nan, mu_ncov = nan
+2024-03-03 17:48:34 - INFO: epoch 190: epoch_loss = nan, mu_ncov = nan
+2024-03-03 17:49:15 - INFO: epoch 191: epoch_loss = nan, mu_ncov = nan
+2024-03-03 17:49:51 - INFO: epoch 192: epoch_loss = nan, mu_ncov = nan
+2024-03-03 17:50:26 - INFO: epoch 193: epoch_loss = nan, mu_ncov = nan
+2024-03-03 17:51:04 - INFO: epoch 194: epoch_loss = nan, mu_ncov = nan
+2024-03-03 17:51:41 - INFO: epoch 195: epoch_loss = nan, mu_ncov = nan
+2024-03-03 17:52:18 - INFO: epoch 196: epoch_loss = nan, mu_ncov = nan
+2024-03-03 17:52:54 - INFO: epoch 197: epoch_loss = nan, mu_ncov = nan
+2024-03-03 17:53:31 - INFO: epoch 198: epoch_loss = nan, mu_ncov = nan
+2024-03-03 17:54:07 - INFO: epoch 199: epoch_loss = nan, mu_ncov = nan
+2024-03-03 17:54:08 - CRITICAL: MODEL TESTING
+2024-03-03 17:54:20 - INFO: true positive: 0
+2024-03-03 17:54:20 - INFO: true negative: 794949
+2024-03-03 17:54:20 - INFO: false positive: 0
+2024-03-03 17:54:20 - INFO: false negative: 14669
+2024-03-03 17:54:20 - INFO: recall = 0.0
+2024-03-03 17:54:20 - INFO: mu_cov = nan
+2024-03-03 17:54:20 - INFO: dev_cov = nan
+2024-03-03 17:54:20 - INFO: mu_ncov = nan
+2024-03-03 17:54:20 - INFO: dev_ncov = nan
