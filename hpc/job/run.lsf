@@ -1,0 +1,49 @@
+#BSUB -W 48:00
+#BSUB -o /rsrch4/home/genomic_med/rcheeter/druggabilityclassifier/hpc/out
+#BSUB -e /rsrch4/home/genomic_med/rcheeter/druggabilityclassifier/hpc/out
+#BSUB -cwd /rsrch4/home/genomic_med/rcheeter/druggabilityclassifier
+#BSUB -q gpu
+#BSUB -gpu num=1:gmem=32
+#BSUB -n 10
+#BSUB -M 128
+#BSUB -R rusage[mem=128]
+#BSUB -B
+#BSUB -N
+#BSUB -u rcheeter@mdanderson.org
+#BSUB -J druggabilityclassifier_run
+##
+## ARGUMENT EXPLANATION:
+## -W run-time (wall clock) in hour:min (required)
+## -o use this or output (stdout) will be sent via email
+## -e use this or errors (stderr) will be sent via email
+## -cwd set the current working directory
+## -q queue name (required)
+## -n number of processors required (28=entire node)
+## -M memory limit in GB (required)
+## -R memory reserved in GB (default/minimum is 1GB)
+## -B send email to the user when the job begins (optional)
+## -N send email to the user when the job ends (optional)
+## -u send email to the specified address (required if -B and -N are used)
+##    It is recommended to always include your MD Anderson email address
+## -J arbitrary job name, letters, dashes, underscores only (no spaces)
+##
+## TO SUBMIT:
+## bsub < example.lsf
+##
+## All commands below should be valid linux commands:
+
+# load CUDA and conda
+module load cuda11.8/toolkit/11.8.0
+module load miniconda3
+eval "$(/risapps/rhel8/miniconda3/py39_4.12.0/bin/conda shell.bash hook)"
+
+# activate conda environment
+conda activate mlgpu
+
+# move to directory
+cd /rsrch4/home/genomic_med/rcheeter/druggabilityclassifier
+
+# run programs
+python preprocess.py
+python graph.py
+# python model.py

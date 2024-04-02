@@ -1,0 +1,6 @@
+,pro_id,pro_dir,pro_path,lab_path,pdb_path,radius_pocket,expand_pocket_by_res,include_ligand,graph_path,radius_ncov,ncov_within_residue
+0,2WCJ_A,data/dataset/2WCJ_A,data/dataset/2WCJ_A/protein.pdb,data/dataset/2WCJ_A/labels.npy,data/pdb/2wcj.pdb,4,False,False,data/dataset/2WCJ_A/graph.pyg,10,False
+1,3R04_A,data/dataset/3R04_A,data/dataset/3R04_A/protein.pdb,data/dataset/3R04_A/labels.npy,data/pdb/3r04.pdb,4,False,False,data/dataset/3R04_A/graph.pyg,10,False
+2,4BUZ_A,data/dataset/4BUZ_A,data/dataset/4BUZ_A/protein.pdb,data/dataset/4BUZ_A/labels.npy,data/pdb/4buz.pdb,4,False,False,data/dataset/4BUZ_A/graph.pyg,10,False
+3,3CSW_A,data/dataset/3CSW_A,data/dataset/3CSW_A/protein.pdb,data/dataset/3CSW_A/labels.npy,data/pdb/3csw.pdb,4,False,False,data/dataset/3CSW_A/graph.pyg,10,False
+4,5G0H_A,data/dataset/5G0H_A,data/dataset/5G0H_A/protein.pdb,data/dataset/5G0H_A/labels.npy,data/pdb/5g0h.pdb,4,False,False,data/dataset/5G0H_A/graph.pyg,10,False
