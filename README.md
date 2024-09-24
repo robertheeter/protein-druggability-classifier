@@ -1,4 +1,6 @@
 # druggabilityclassifier
+Attention-based convolutional graph neural network for protein druggability prediction. Completed Spring 2024 at the University of Texas M.D. Anderson Cancer Center, Institute for Data Science in Oncology.
+
 ## About
 **Project to classify protein targets or cavities on protein targets as druggable.**
 
